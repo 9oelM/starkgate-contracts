@@ -30,8 +30,8 @@ printf "${COLOR_OFF}"
 mkdir -p .downloads
 cd .downloads
 
-wget -c https://github.com/starkware-libs/cairo/releases/download/v2.3.0/release-x86_64-unknown-linux-musl.tar.gz -O - | tar -xz
-curl https://binaries.soliditylang.org/linux-amd64/solc-linux-amd64-v0.8.20+commit.a1b79de6 -o solc-0.8.20 && chmod +x solc-0.8.20
+wget -c https://github.com/starkware-libs/cairo/releases/download/v2.3.0/release-aarch64-apple-darwin.tar -O - | tar -xz
+curl -L -o solc-0.8.20 https://github.com/ethereum/solidity/releases/download/v0.8.20/solc-macos && chmod +x solc-0.8.20
 
 cd ..
 rm -rf starkware
